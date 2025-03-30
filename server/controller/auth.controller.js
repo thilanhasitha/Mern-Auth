@@ -42,7 +42,7 @@ export const signin = async(req,res,next)=>{
         const {password:hashedPassword, ...rest} =validUser._doc;
         const expirayDate =new Date(Date.now() + 3600000); // 1 hour
         res.
-        cookie('access_token',token,{httpOnly:true, expires:expirayDate}).status(200).json(rest);
+        cookie('access_token',token,{httpOnly:true, expires:expirayDate }).status(200).json(rest);
 
 
 
