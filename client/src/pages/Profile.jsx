@@ -2,7 +2,9 @@ import React from 'react'
 
 export default function Profile() {
   return (
-    <div>Profile</div>
+    <div>
+      <h1 className='text-3xl font-semibold'>profile</h1>
+    </div>
   )
 }
 
