@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import route from './route/auth.route.js';
 import userRouter from './route/user.route.js';
+import cookieParser from 'cookie-parser';
 
 
 dotenv.config();
@@ -19,6 +20,7 @@ mongoose.connect(process.env.MONGO)
 })
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 
 app.use('/api/v1/user',userRouter);
 app.use('/api/v1',route);
